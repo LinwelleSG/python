@@ -128,7 +128,7 @@ print(len('Hello, World!')) # it takes only one argument
 
 Let us print and also find the length of the variables declared at the top:
 
-**Example:**
+**Example:** 
 
 ```py
 # Printing the values stored in the variables
