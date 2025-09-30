@@ -224,7 +224,7 @@ print('coding' in 'coding for all') # True - because coding for all has the word
 print('a in an:', 'a' in 'an')      # True
 print('4 is 2 ** 2:', 4 is 2 ** 2)   # True
 ```
-
+ 
 ### Logical Operators
 
 Unlike other programming languages python uses keywords _and_, _or_ and _not_ for logical operators. Logical operators are used to combine conditional statements:
