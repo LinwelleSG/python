@@ -90,7 +90,7 @@ def add_all_nums(*nums):
 nums_input = input("Enter numbers separated by comma: ")
 nums = [float(n) for n in nums_input.split(",")]
 
-print(add_all_nums(*nums)) """
+print(add_all_nums(*nums)) 
 
 #Temperature in °C can be converted to °F using this formula: °F = (°C x 9/5) + 32. Write a function which converts °C to °F, convert_celsius_to-fahrenheit.
 def c_to_f(c):
@@ -109,10 +109,40 @@ def check_season(month):
         return f"{month} is Autumn season."
     else:
         return "Please enter a valid month"
-print(check_season(input("Enter a month to determine which season it is: ")))
+print(check_season(input("Enter a month to determine which season it is: "))) """
+
 #Write a function called calculate_slope which return the slope of a linear equation
+def calculate_slope(x1,y1,x2,y2):
+    slope =  (y2 - y1) / (x2 - x1)
+    return slope
+print(calculate_slope(3,5,7,9))
 #Quadratic equation is calculated as follows: ax² + bx + c = 0. Write a function which calculates solution set of a quadratic equation, solve_quadratic_eqn.
-def solve_quadratic_eqn(valueA,valueB,valueC,x):
-    quad = valueA
+def solve_quadratic_eqn(x,a,b,c):
+    quadratic = ((a * x) ** 2) + ((b * x) ** 2) + c
+    return quadratic
+print(solve_quadratic_eqn(3,5,2,4))
 #Declare a function named print_list. It takes a list as a parameter and it prints out each element of the list.
+def print_list(lst):
+    for item in lst:
+        print(item)
+names = ["Lin","Du","JM"]
+print_list(names)
 #Declare a function named reverse_list. It takes an array as a parameter and it returns the reverse of the array (use loops).
+def reverse_list(items):
+    reversed_items = []
+    for i in range(len(items) -1, -1, -1):
+        reversed_items.append(items[i])
+    return reversed_items
+numbers = [5,10,15,20,25]
+print(reverse_list(numbers))
+#Declare a function named capitalize_list_items. It takes a list as a parameter and it returns a capitalized list of items
+def capitalized_list_items(listahan):
+    for item in listahan:
+        print(item.upper())
+titles = ["shawshank", "friends", "mobile legends"]
+capitalized_list_items(titles)
+#Declare a function named add_item. It takes a list and an item parameters. It returns a list with the item added at the end.
+def add_item(                                                        ):
+
+
+
