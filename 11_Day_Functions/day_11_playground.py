@@ -109,7 +109,7 @@ def check_season(month):
         return f"{month} is Autumn season."
     else:
         return "Please enter a valid month"
-print(check_season(input("Enter a month to determine which season it is: "))) """
+print(check_season(input("Enter a month to determine which season it is: "))) 
 
 #Write a function called calculate_slope which return the slope of a linear equation
 def calculate_slope(x1,y1,x2,y2):
@@ -142,7 +142,114 @@ def capitalized_list_items(listahan):
 titles = ["shawshank", "friends", "mobile legends"]
 capitalized_list_items(titles)
 #Declare a function named add_item. It takes a list and an item parameters. It returns a list with the item added at the end.
-def add_item(                                                        ):
+def add_item(lest,aytem):
+         lest.append(aytem)
+         return lest
+lestahan = ["Yel", "Dan", "Lin"]
+print(add_item(lestahan,"Goy")) """
+#Declare a function named remove_item. It takes a list and an item parameters. It returns a list with the item removed from it.
+def remove_item(lst,item):
+    if item in lst:
+        lst.remove(item)
+    return lst
+items = ["Hikaru", "Magnus", "Fabiano","Gukesh"]
+print(remove_item(items, "Magnus"))
+#Declare a function named sum_of_numbers. It takes a number parameter and it adds all the numbers in that range.
+def sum_of_numbers(num):
+    total = 0
+    for i in range(num + 1):
+        total += i
+    return total
+print(sum_of_numbers(10))
+#Declare a function named sum_of_odds. It takes a number parameter and it adds all the odd numbers in that range.
+def sum_of_odds(n):
+    odds = 0
+    for i in range(n + 1):
+        if i % 2 == 1:
+            odds += i
+    return odds
+print(sum_of_odds(10))
+#Declare a function named sum_of_even. It takes a number parameter and it adds all the even numbers in that - range.
+def sum_of_even(n):
+    even = 0
+    for i in range(n + 1):
+        if i % 2 == 0:
+            even += i
+    return even
+print(sum_of_even(10))
+#Exercises: Level 2
+#Declare a function named evens_and_odds . It takes a positive integer as parameter and it counts number of evens and odds in the number.
+def evens_and_odds(n):
+    odds = []
+    evens = []
+    for i in range(n + 1):
+        if i % 2 == 0:
+            evens.append(i)
+        else:
+            odds.append(i)
+            
+    print(f"The number of odd numbers in {n} is {len(odds)}")
+    print(f"The number of even numbers in {n} is {len(evens)}")
+    
+    return {"odds" : odds, "evens" : evens}
+
+print(evens_and_odds(20))
+
+#Call your function factorial, it takes a whole number as a parameter and it return a factorial of the number
+def factorial(n):
+    total = 1
+    for i in range(1,n + 1):
+        total *= i
+    return total
+print(factorial(3))
+#Call your function is_empty, it takes a parameter and it checks if it is empty or not
+def is_empty(item):
+    if not item:
+        return True
+    else:
+        return False
+print(is_empty([]))
+#Write different functions which take lists. They should calculate_mean, calculate_median, calculate_mode, calculate_range, calculate_variance, calculate_std (standard deviation).
+def calculate_mean(lst):
+    return sum(lst) / len(lst)
+
+def calculate_median(lst):
+    lst_sorted = sorted(lst)
+    n = len(lst)
+    mid = n // 2
+    if n % 2 == 0:
+        return (lst_sorted[mid - 1] + lst_sorted[mid]) / 2
+    else:
+        return lst_sorted[mid]
+
+def calculate_mode(lst):
+    frequency = {}
+    for num in lst:
+        frequency[num] = frequency.get(num, 0) + 1
+    max_freq = max(frequency.values())
+    modes = [num for num, freq in frequency.items() if freq == max_freq]
+    if len(modes) == len(lst):
+        return None  
+    return modes
+
+def calculate_range(lst):
+    return max(lst) - min(lst)
+
+def calculate_variance(lst):
+    mean = calculate_mean(lst)
+    squared_diffs = [(x - mean) ** 2 for x in lst]
+    return sum(squared_diffs) / len(lst)
+
+def calculate_std(lst):
+    variance = calculate_variance(lst)
+    return variance ** 0.5
+
+#Write a functions which checks if all items are unique in the list.
+def is_unique(lst):
+    return len(lst) == len(set(lst))
+items = ["Wesley", "SJC", "Columban", "SJC"]
+print(is_unique(items))
+
 
 
 
