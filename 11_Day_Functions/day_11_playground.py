@@ -209,6 +209,8 @@ def is_empty(item):
     else:
         return False
 print(is_empty([]))
+
+
 #Write different functions which take lists. They should calculate_mean, calculate_median, calculate_mode, calculate_range, calculate_variance, calculate_std (standard deviation).
 def calculate_mean(lst):
     return sum(lst) / len(lst)
@@ -244,12 +246,33 @@ def calculate_std(lst):
     variance = calculate_variance(lst)
     return variance ** 0.5
 
+nums = [5,2,23,3,6,9]
+print(calculate_mean(nums))
+print(calculate_median(nums))
+print(calculate_mode(nums))
+print(calculate_range(nums))
+print(calculate_variance(nums))
+print(f"{calculate_std(nums):.2f}")
+
 #Write a functions which checks if all items are unique in the list.
 def is_unique(lst):
     return len(lst) == len(set(lst))
 items = ["Wesley", "SJC", "Columban", "SJC"]
 print(is_unique(items))
 
+#Write a function which checks if all the items of the list are of the same data type.
+def is_same(lst):
+    if not lst:
+        return True
+    first_type = type(lst[0])
+    
+    for item in lst:
+        if type(item) != first_type:
+            return False
+    return True
+print(is_same([2, "Carlsen", {"gg": "ez"}]))
 
-
-
+#Write a function which check if provided variable is a valid python variable
+def is_valid(var):
+    return var.isidentifier()
+print(is_valid("8python"))
